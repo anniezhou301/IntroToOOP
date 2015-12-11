@@ -1,16 +1,17 @@
-Ball b;     
-Ball c;
+int count = 5;
+Ball[] balls = new Ball[count];
 
 void setup() {
   size(800, 600);
-  b = new Ball();
-  c = new Ball();
+  for(int i = 0;i<count;i++){
+    balls[i]= new Ball();
+  }
 }
 
 void draw() {
   background(0);
-  b.display();     
-  c.display();   
-  b.move();
-  c.move();
+  for(int i = 0; i<count; i++){
+    balls[i].display();
+    balls[i].move();
+  }
 }
